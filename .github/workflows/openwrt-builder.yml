@@ -78,6 +78,12 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
+
+    - name: SSH connection to Actions
+      uses: mxschmitt/action-tmate@v3
+      timeout-minutes: 60
+
+
     - name: Download package
       id: package
       run: |
